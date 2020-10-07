@@ -19,12 +19,11 @@ end
 
 def caesar_cipher(str, key)
   return 'Not a valid key' unless validkey?(key)
-
-  str.chars.map do |index|
-    if isalpha?(index) && isupper?(index)
-      str[index] = crypt(index, key, 90)
-    elsif isalpha?(index) && !isupper?(index)
-      str[index] = crypt(index, key, 122)
+  str.chars.map.with_index do |char, i|
+    if isalpha?(char) && isupper?(char)
+      str[i] = crypt(char, key, 90)
+    elsif isalpha?(char) && !isupper?(char)
+      str[i] = crypt(char, key, 122)
     end
   end
   return str

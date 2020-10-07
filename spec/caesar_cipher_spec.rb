@@ -42,5 +42,6 @@ describe "caesar_cipher method" do
     expect(caesar_cipher("Hello World", 5)).to eq("Mjqqt Btwqi")
     expect(caesar_cipher("Aaaab", 2)).to eq("Ccccd")
     expect(caesar_cipher("My name", 3)).to eq("Pb qdph")
+    expect(caesar_cipher("My name", 2)).to eq("Oa pcog")
   end
 end
